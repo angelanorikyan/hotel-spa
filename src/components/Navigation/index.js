@@ -1,6 +1,6 @@
+import './style.scss';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { uuid } from 'uuidv4';
 
 const  Navigation = () => {
   const [navBars] = useState([
@@ -15,9 +15,9 @@ const  Navigation = () => {
   ]);
 
     return (
-      <div>
+      <div id='navbar'>
         {navBars.map(nav => {
-          return <Link key={uuid()} to={`/${nav.id}`}>{nav.value}</Link>
+          return <Link key={nav.id} to={`/${nav.id}`}>{nav.value}</Link>
         })}
       </div>
     )
