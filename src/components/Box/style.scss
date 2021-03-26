@@ -1,0 +1,9 @@
+@import "../../globalStyle.scss"; 
+.boxWrapper {
+  background: #fff;
+  width: 100%;
+  max-width: 225px;
+  height: 488px;
+  border: 1px solid $lightBlue;
+  margin: 5px;
+}
