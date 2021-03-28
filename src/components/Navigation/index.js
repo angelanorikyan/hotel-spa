@@ -21,11 +21,15 @@ const  Navigation = ({history}) => {
 
     return (
       <div className='navbar'>
+        <div className='navContainer'>
         {navBars.map(nav => {
-          return <div className='tabsWrapper'>
+          return <div 
+            className='tabsWrapper'
+            key={nav.id}>
             <Link className={`tabs ${activeTab === nav.id ? 'active' : ''}`} key={nav.id} to={`/${nav.id}`}>{nav.value}</Link>
             </div>
         })}
+        </div>
       </div>
     )
 }

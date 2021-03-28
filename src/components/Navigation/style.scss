@@ -6,28 +6,32 @@
   height: 45px;
   background: #fff;
   margin: 0 auto;
-  max-width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  max-width: 95%;
   box-shadow: 1px 1px 5px 0px #dddddd;
   border-top: none;
-  padding: 0 25px;
 
-  & .tabsWrapper { 
-    padding: 12px 0;
-    text-align: center;
+  .navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 25px;
 
-    & .tabs {
-      color: $blue;
-      font-family: 'RobotoSlab Regular';
-      text-decoration: none;
-      padding: 12px 40px;
-    }
-
-    & .active {
-      border-bottom: 2px solid $title1;
-      color: $title1;
+    .tabsWrapper { 
+      padding: 12px 0;
+      text-align: center;
+  
+      .tabs {
+        color: $blue;
+        font-family: 'RobotoSlab Regular';
+        text-decoration: none;
+        padding: 12px 35px;
+      }
+  
+      & .active {
+        border-bottom: 2px solid $title1;
+        color: $title1;
+      }
     }
   }
+   
 }

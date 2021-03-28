@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import produce from 'immer';
 
 import tab2Data from '../../api/tab2Data';
 // components
@@ -26,7 +25,10 @@ const Tab2 = () => {
   }
 
   return ( 
-    tab2Data.map(tab2 => <div className='container options'>
+    tab2Data.map(tab2 => <div 
+      className='container options'
+      key={tab2.id}>
+      <span className='hotline'>Exclusivo Hoteles.com</span>
       <div className='accordWrapper' onClick={() => handleOptionVisible(tab2)}>
         <span><img className={`arrow ${tab2.open ? 'rotate' : ''}`} src={arrow} alt='arrow'/></span>
         <span className='mainTitle'>{tab2.title}</span>

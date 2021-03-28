@@ -3,21 +3,53 @@
 .options {
   background: #fff;
   margin-top: 35px;
+  padding:0;
+  max-width: 95%;
 
-  & .accordWrapper{
-    height: 30px;
-    margin: 20px 0;
+    .hotline{
+      float: right;
+      background: $red;
+      color: #fff;
+      padding: 3px 25px;
+      font-size: $xxxSmall;
+      letter-spacing: 1.52px;
+      text-transform: uppercase;
+
+      @media(max-width: $mobile){
+        padding: 2px 15px;
+        font-size:$smallest;
+      }
+    }
+
+    .accordWrapper{
+    height: 35px;
+    margin: 20px 25px;
     cursor: pointer;
+
+    @media(max-width: $mobile){
+      height: 20px;
+    }
 
     .mainTitle {
       font-size: 24px;
       color: $accordionTitle;
       font-family: 'RobotoSlab Bold';
       margin:20px;
+
+      @media(max-width: $mobile){
+        font-size:$xSmall;
+        margin:15px;
+      }
     }
-    .subTitle{
+
+    .subTitle {
       color:$boxTitle;
       font-size: $xxSmall;
+
+      @media(max-width: $mobile){
+        font-size:$smallest;
+      }
+
     }
 
     .arrow {

@@ -1,9 +1,8 @@
 @import "../../globalStyle.scss"; 
 
 .accordContainer {
- 
   border: 1px solid $lightGrey;
-  margin: 15px 0;
+  margin: 15px;
 
   .accordBox {
     display: flex;
@@ -16,6 +15,7 @@
     .accordTitle {
       color:$title1;
       margin: 10px 0;
+      font-family: 'RobotoSlab Bold';
     }
 
     .textContent {
@@ -32,32 +32,37 @@
       }
     }
 
-    
     .rotate {
       transform: rotate(180deg);
     }
     .moreInfo {
       color: $blue;
+      cursor: pointer;
+      font-family: 'Roboto Bold';
     }
   }
+
   .infoContainter {
     color:$buttonLabel;
     font-size: $xxSmall;
-    margin: 10px 30px;
-  }
-  .include {
-    margin: 10px;
-  }
-  .infoContent {
-    height: 200px;
-    
-    .list { 
-      width: 30%;
-      float: left;
-      clear: inherit;
-      margin: 0 10px;
-      line-height: 21px;
+    margin: 15px 30px;
+ 
 
+    .include {
+      margin: 10px;
+    }
+
+    .infoContent {
+      height: 200px;
+      
+      .list { 
+        width: 30%;
+        float: left;
+        clear: inherit;
+        margin: 0 10px;
+        line-height: 21px;
+
+      }
       .dot {
         width: 5px;
         height: 5px;
@@ -66,6 +71,9 @@
         margin: 5px;
       }
     }
-    
-  }
+    .addInfo {
+      margin:10px;
+      color: $title1;
+    }
+}
 }
