@@ -1,0 +1,29 @@
+@import "../../globalStyle.scss"; 
+
+.options {
+  background: #fff;
+  margin-top: 35px;
+
+  & .accordWrapper{
+    height: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+
+    .mainTitle {
+      font-size: 24px;
+      color: $accordionTitle;
+      font-family: 'RobotoSlab Bold';
+      margin:20px;
+    }
+    .subTitle{
+      color:$boxTitle;
+      font-size: $xxSmall;
+    }
+
+    .arrow {
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
