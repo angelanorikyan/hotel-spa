@@ -6,4 +6,54 @@
   height: 488px;
   border: 1px solid $lightBlue;
   margin: 5px;
+  padding: 10px;
+
+  &.active { 
+    border: 1px solid $boxBorder;
+  }
+
+   .boxTitle {
+    text-align: center;
+    margin: 20px 0;
+    color:$boxTitle;
+    height: 25px;
+
+    &.active { 
+      color:$title1;
+    }
+  }
+
+  & > .separator{
+    width: 30%;
+    height: 1px;
+    margin: 0 auto;
+    background: $lightBlue;
+  }
+  & > ul {
+    color:$boxText;
+    padding: 0 0 0 15px;
+    font-size:$xxSmall;
+    height: 335px;
+
+    & > li {
+      padding:5px 0;
+    }
+
+    & > li::marker {
+      color: lightGrey;
+    }
+  }
+   .radioWrapper {
+    width: 100%;
+    background: $buttonBackground;
+    color: $buttonLabel;
+    height: 45px;
+
+    &.active { 
+      border: 1px solid $boxBorder;
+    }
+    .package {
+      padding:13px;
+    }
+   }
 }
