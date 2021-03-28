@@ -1,0 +1,29 @@
+@import "../../globalStyle.scss"; 
+.container {
+  background:$milk;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  border: 1px solid $borderGray;
+  padding: 0 25px;
+  box-shadow: 1px 1px 5px 0px #dddddd;
+
+  & .header {
+    text-align: center;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    color:$title1;
+    
+    & .title {
+      margin: 50px;
+    }
+  }
+
+  & > .boxContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .stars {
+    width: 50px;
+  }
+}

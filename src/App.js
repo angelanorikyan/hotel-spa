@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route , Redirect} from "react-router-dom";
 import Navigation from  '../src/components/Navigation';
 
 // pages
@@ -8,7 +8,10 @@ import Tab2 from './pages/Tab2/index';
 function App() {
   return (
     <Router>
-      <Navigation/>
+    <Navigation/>
+    <Route exact path="/">
+      <Redirect to="/tab1" />
+    </Route>
       <Switch>
         <Route path="/tab1">
           <Tab1/>
