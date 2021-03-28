@@ -2,6 +2,7 @@ const tab1Data = [
   {
     title:'Solo Alojamiento',
     id:'solo',
+    status: false,
     include:[
       {
         value: 'Sin régimen',
@@ -16,6 +17,7 @@ const tab1Data = [
   {
     title:'Alojamiento y Desayuno',
     id:'limited',
+    status: false,
     include:[
       {
         value:'Desayuno  buffet completo',
@@ -26,6 +28,7 @@ const tab1Data = [
   {
     title:'Media Pensión',
     id:'medium',
+    status: false,
     include:[
       {
         value: 'Desayuno buffet completo',
@@ -44,6 +47,7 @@ const tab1Data = [
   {
     title:'Todo incluido',
     id:'allInclusive',
+    status: false,
     include:[
       {
         value: 'Dispondrás de comida y bebida todo el día y durante toda tu estancia.',
@@ -66,6 +70,7 @@ const tab1Data = [
   {
     title:'Unlimited Service',
     id:'unlimited',
+    status: false,
     include:[
       {
         value: 'Restaurante buffet con bebidas Premium.',
