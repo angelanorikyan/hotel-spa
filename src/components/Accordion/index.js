@@ -31,7 +31,12 @@ const Accordion = ({accordData}) => {
       className='accordContainer'
       key={elm.id}> 
      <div className='accordBox'>
-      <span><img src={require('../../assets/imgs/'+elm.image.path).default} alt={elm.image.alt}/></span>
+      <span>
+        <img 
+          src={require('../../assets/imgs/'+elm.image.path).default} 
+          alt={elm.image.alt}
+          className='accordImg'/>
+      </span>
         <div className='accordContent'>
           <div className='accordTitle'>{elm.title}</div>
           <div className='textContent'>

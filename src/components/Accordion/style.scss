@@ -6,6 +6,15 @@
 
   .accordBox {
     display: flex;
+
+    @media(max-width: $tablet){
+      flex-wrap: wrap;
+     }
+  }
+  .accordImg {
+    @media(max-width: $mobile){
+      width: 100%;
+     }
   }
 
   .accordContent {
@@ -25,9 +34,14 @@
       font-size: $xxSmall;
       line-height: 20px;
 
+      @media(max-width: $tablet){
+        height: auto;
+        max-height: none;
+       }
+
       .accordText {
         color: $buttonLabel;
-        height: 100%;
+        height: auto;
         width: 80%;
       }
     }
@@ -39,6 +53,10 @@
       color: $blue;
       cursor: pointer;
       font-family: 'Roboto Bold';
+
+      @media(max-width: $mobile){
+        font-size: $xxxSmall;
+       }
     }
   }
 
@@ -46,14 +64,19 @@
     color:$buttonLabel;
     font-size: $xxSmall;
     margin: 15px 30px;
- 
+    display: inline-grid;
 
     .include {
       margin: 10px;
     }
 
     .infoContent {
-      height: 200px;
+      height: auto;
+
+      @media(max-width: $tablet){
+        overflow: auto;
+        margin: 0 0 10px 0;
+      }
       
       .list { 
         width: 30%;
@@ -61,6 +84,11 @@
         clear: inherit;
         margin: 0 10px;
         line-height: 21px;
+
+        @media(max-width: $tablet){
+         width:100%;
+         margin:0;
+        }
 
       }
       .dot {
@@ -75,5 +103,5 @@
       margin:10px;
       color: $title1;
     }
-}
+  }
 }
