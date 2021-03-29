@@ -1,24 +1,17 @@
 import { useState } from 'react';
-import produce from 'immer';
-
 import tab1Data from '../../api/tab1Data';
 // components
 import Box from '../../components/Box/index.js';
 // style
 import './style.scss';
-
 // images
 import star from '../../assets/imgs/stars.png';
 
 const Tab1 = () => {
-  const [allBoxes, setAllBoxes] = useState(tab1Data);
+  const [value, setValue] = useState();
 
   const handleBoxClick = (box) => {
-    // const newBoxes = produce(allBoxes, draftBox => {
-    //   draftBox.map(b => b.id === box.id ? ({...box, status: !box.status}) : box)
-    // })
-    setAllBoxes(produce(allBoxes , draftBox => draftBox.map(b => b.id === box.id ? ({...box, status: !box.status}) : b)) )
-
+    setValue(box.id)
   }
 
   return (
@@ -32,6 +25,7 @@ const Tab1 = () => {
           key={tab1.id}
           onBoxClick={(box) => handleBoxClick(box)}
           boxData={tab1}
+          value={value}
         />)}
       </section>
     </section>

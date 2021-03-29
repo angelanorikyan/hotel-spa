@@ -1,0 +1,108 @@
+@import "../../globalStyle.scss"; 
+
+.accordContainer {
+  border: 1px solid $lightGrey;
+  margin: 15px;
+
+  .accordBox {
+    display: flex;
+
+    @media(max-width: $tablet){
+      flex-wrap: wrap;
+     }
+  }
+  .accordImg {
+    @media(max-width: $mobile){
+      width: 100%;
+     }
+  }
+
+  .accordContent {
+    width: 100%;
+    margin: 10px 30px;
+
+    .accordTitle {
+      color:$title1;
+      margin: 10px 0;
+      font-family: 'RobotoSlab Bold';
+    }
+
+    .textContent {
+      height: 100%;
+      max-height: calc(100% - 65px);
+      padding: 0 0 10px 0;
+      font-size: $xxSmall;
+      line-height: 20px;
+
+      @media(max-width: $tablet){
+        height: auto;
+        max-height: none;
+       }
+
+      .accordText {
+        color: $buttonLabel;
+        height: auto;
+        width: 80%;
+      }
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+    
+    .moreInfo {
+      color: $blue;
+      cursor: pointer;
+      font-family: 'Roboto Bold';
+
+      @media(max-width: $mobile){
+        font-size: $xxxSmall;
+       }
+    }
+  }
+
+  .infoContainter {
+    color:$buttonLabel;
+    font-size: $xxSmall;
+    margin: 15px 30px;
+    display: inline-grid;
+
+    .include {
+      margin: 10px;
+    }
+
+    .infoContent {
+      height: auto;
+
+      @media(max-width: $tablet){
+        overflow: auto;
+        margin: 0 0 10px 0;
+      }
+      
+      .list { 
+        width: 30%;
+        float: left;
+        clear: inherit;
+        margin: 0 10px;
+        line-height: 21px;
+
+        @media(max-width: $tablet){
+         width:100%;
+         margin:0;
+        }
+
+      }
+      .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 2.5px;
+        background: $buttonLabel;
+        margin: 5px;
+      }
+    }
+    .addInfo {
+      margin:10px;
+      color: $title1;
+    }
+  }
+}

@@ -14,13 +14,23 @@ const  Navigation = () => {
     }
   ]);
 
-    return (
-      <div>
-        {navBars.map(nav => {
-          return <Link key={uuid()} to={`/${nav.id}`}>{nav.value}</Link>
+  useEffect(() => {
+    setActiveTab(history.location.pathname.slice(1))
+  })
+
+  return (
+    <div className='navbar'>
+      <div className='navContainer'>
+      {navBars.map(nav => {
+        return <div 
+          className='tabsWrapper'
+          key={nav.id}>
+          <Link className={`tabs ${activeTab === nav.id ? 'active' : ''}`} key={nav.id} to={`/${nav.id}`}>{nav.value}</Link>
+          </div>
         })}
       </div>
-    )
+    </div>
+  )
 }
 export default  Navigation;
 

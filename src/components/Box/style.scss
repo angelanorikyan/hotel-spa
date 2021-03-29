@@ -3,10 +3,14 @@
   background: #fff;
   width: 100%;
   max-width: 225px;
-  height: 488px;
   border: 1px solid $lightBlue;
   margin: 5px;
   padding: 10px;
+
+  @media(max-width: $mobile){
+    max-width: 250px;
+    height: auto;
+   }
 
   &.active { 
     border: 1px solid $boxBorder;
@@ -23,17 +27,19 @@
     }
   }
 
-  & > .separator{
-    width: 30%;
+  .separator {
+    width: 40%;
     height: 1px;
     margin: 0 auto;
     background: $lightBlue;
   }
-  & > ul {
+  
+   ul {
     color:$boxText;
     padding: 0 0 0 15px;
     font-size:$xxSmall;
-    height: 335px;
+    height: 100%;
+    max-height: calc(100% - 140px);
 
     & > li {
       padding:5px 0;
@@ -53,7 +59,67 @@
       border: 1px solid $boxBorder;
     }
     .package {
-      padding:13px;
+      padding:13px 0px;
+      text-align: center;
+
+      .radioButton {
+        margin: 0 15px 0 0;
+      }
+     }
+
+     .radioButtonWrapper {
+      display: inline-block;
+      position: relative;
+      padding: 0 6px;
     }
-   }
+
+    .package input[type='radio'] {
+      display: none;
+    }
+
+    .package {
+      color: #666;
+      font-weight: normal;
+
+      &.active { 
+        color: $title1;
+      }
+    }
+
+    .package label:before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin: 0 5px 0 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid $buttonLabel;
+      background-color: transparent;
+    }
+    .package input[type='radio']:checked + label:before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin: 0 5px 0 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid $green;
+      background-color: transparent;
+    }
+    .package input[type='radio']:checked + label:after {
+      border-radius: 11px;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 6px;
+      left: 9px;
+      content: " ";
+      display: block;
+      background: $green;
+    }
+  }
 }
