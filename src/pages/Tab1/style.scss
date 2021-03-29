@@ -1,11 +1,11 @@
 @import "../../globalStyle.scss"; 
+
 .container {
   background:$milk;
   width: 100%;
-  max-width: 90%;
+  max-width: 95%;
   margin: 0 auto;
   border: 1px solid $borderGray;
-  padding: 0 25px;
   box-shadow: 1px 1px 5px 0px #dddddd;
 
   & .header {
@@ -16,12 +16,21 @@
     
     & .title {
       margin: 50px;
+
+      @media(max-width: $tablet){
+        margin: 5px;
+       }
     }
   }
 
-  & > .boxContainer {
+  .boxContainer {
     display: flex;
     justify-content: center;
+    margin: 15px;
+
+    @media(max-width: $smallScreen){
+      flex-wrap:wrap;
+     }
   }
   .stars {
     width: 50px;

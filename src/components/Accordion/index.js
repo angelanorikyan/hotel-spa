@@ -20,43 +20,40 @@ const Accordion = ({accordData}) => {
         setInfoVisible(!infoVisible)
       }
     })
-   
   }
-  
 
   return ( 
     accordData.include.map(elm =>{ 
-
     return <section  
       className='accordContainer'
       key={elm.id}> 
-     <div className='accordBox'>
-      <span>
-        <img 
-          src={require('../../assets/imgs/'+elm.image.path).default} 
-          alt={elm.image.alt}
-          className='accordImg'/>
-      </span>
-        <div className='accordContent'>
-          <div className='accordTitle'>{elm.title}</div>
-          <div className='textContent'>
-            <div className='accordText'>{elm.text}</div>
-          </div>
-          <span className='moreInfo' onClick={() => handleInfoVisible(elm)}> M&#xE1;s informaci&#xF3;n y condiciones <span>
-            <img className={`${elm.open ? 'rotate' : ''}`} src={arrow} alt='arrow'/>
+      <div className='accordBox'>
+        <span>
+          <img 
+            src={require('../../assets/imgs/'+elm.image.path).default} 
+            alt={elm.image.alt}
+            className='accordImg'/>
+        </span>
+          <div className='accordContent'>
+            <div className='accordTitle'>{elm.title}</div>
+            <div className='textContent'>
+              <div className='accordText'>{elm.text}</div>
+            </div>
+            <span className='moreInfo' onClick={() => handleInfoVisible(elm)}> M&#xE1;s informaci&#xF3;n y condiciones <span>
+              <img className={`${elm.open ? 'rotate' : ''}`} src={arrow} alt='arrow'/>
+              </span>
             </span>
-          </span>
+          </div>
         </div>
-      </div>
       {elm.open ? <section className='infoContainter'>
-          <div className='include'>Incluye </div>
+        <div className='include'>Incluye </div>
           <div className='infoContent'> 
             {elm.info.map(i => 
               <div 
                 className='list'
                 key={i.id}> &bull; {i.text}</div>
-          )} 
-        </div> 
+            )} 
+          </div> 
         <span className='addInfo'>Valores no acumulables a otras promociones similares</span>
       </section> : null}
     </section>})

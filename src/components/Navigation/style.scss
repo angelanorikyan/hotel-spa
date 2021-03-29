@@ -25,6 +25,10 @@
         font-family: 'RobotoSlab Regular';
         text-decoration: none;
         padding: 12px 35px;
+        
+        @media(max-width: $smallMobile){
+          padding: 12px 20px;
+         }
       }
   
       & .active {
