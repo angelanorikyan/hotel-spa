@@ -1,9 +1,7 @@
 import { useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 // images
 import arrow from '../../assets/imgs/arrow.png';
-import images from '../../assets/imgs/yoga.png';
-
 // style
 import './style.scss';
 
@@ -26,7 +24,7 @@ const Accordion = ({accordData}) => {
     accordData.include.map(elm =>{ 
     return <section  
       className='accordContainer'
-      key={elm.id}> 
+      key={uuidv4()}> 
       <div className='accordBox'>
         <span>
           <img 
@@ -39,9 +37,10 @@ const Accordion = ({accordData}) => {
             <div className='textContent'>
               <div className='accordText'>{elm.text}</div>
             </div>
-            <span className='moreInfo' onClick={() => handleInfoVisible(elm)}> M&#xE1;s informaci&#xF3;n y condiciones <span>
+            <span className='moreInfo' onClick={() => handleInfoVisible(elm)}> M&#xE1;s informaci&#xF3;n y condiciones 
+            <span className='imgWrapper'>
               <img className={`${elm.open ? 'rotate' : ''}`} src={arrow} alt='arrow'/>
-              </span>
+            </span>
             </span>
           </div>
         </div>
@@ -51,7 +50,7 @@ const Accordion = ({accordData}) => {
             {elm.info.map(i => 
               <div 
                 className='list'
-                key={i.id}> &bull; {i.text}</div>
+                key={uuidv4()}> &bull; {i.text}</div>
             )} 
           </div> 
         <span className='addInfo'>Valores no acumulables a otras promociones similares</span>

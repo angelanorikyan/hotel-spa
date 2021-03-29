@@ -8,7 +8,7 @@
   padding: 10px;
 
   @media(max-width: $mobile){
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
    }
 
@@ -37,7 +37,7 @@
    ul {
     color:$boxText;
     padding: 0 0 0 15px;
-    font-size:$xxSmall;
+    font-size:$xSmall;
     height: 100%;
     max-height: calc(100% - 140px);
 

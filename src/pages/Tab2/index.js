@@ -1,18 +1,18 @@
 import { useState } from 'react';
-
-import tab2Data from '../../api/tab2Data';
+import { v4 as uuidv4 } from 'uuid';
+import data from '../../api/tab2Data';
 // components
 import Accordion from '../../components/Accordion/index.js';
 // images
 import arrow from '../../assets/imgs/arrow.png';
 
 // style 
-import './style.scss'
+import './style.scss';
 
 
 const Tab2 = () => {
   const [optionVisible, setOptionVisible] = useState();
-  const [accordData] = useState(tab2Data);
+  const [accordData] = useState(data);
 
   const handleOptionVisible = (tab2) => {
     accordData.forEach(elm => {
@@ -24,9 +24,9 @@ const Tab2 = () => {
   }
 
   return ( 
-    tab2Data.map(tab2 => <div 
+    data.map(tab2 => <div 
       className='container options'
-      key={tab2.id}>
+      key={uuidv4()}>
       <span className='hotline'>Exclusivo Hoteles.com</span>
       <div className='accordWrapper' onClick={() => handleOptionVisible(tab2)}>
         <span>

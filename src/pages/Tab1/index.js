@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import tab1Data from '../../api/tab1Data';
+import data from '../../api/tab1Data';
+import { v4 as uuidv4 } from 'uuid';
 // components
 import Box from '../../components/Box/index.js';
 // style
@@ -21,8 +22,8 @@ const Tab1 = () => {
         <span> <img className='stars' src={star} alt='4-star'/></span>
       </div>
       <section className='boxContainer'>
-        {tab1Data.map(tab1 => <Box
-          key={tab1.id}
+        {data.map(tab1 => <Box
+          key={uuidv4()}
           onBoxClick={(box) => handleBoxClick(box)}
           boxData={tab1}
           value={value}

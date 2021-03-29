@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route , Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from  '../src/components/Navigation';
 
 // pages
@@ -9,17 +9,17 @@ function App() {
   return (
     <Router>
     <Navigation/>
-    <Route exact path="/">
-      <Redirect to="/tab1" />
-    </Route>
-      <Switch>
-        <Route path="/tab1">
-          <Tab1/>
-        </Route>
-        <Route path="/tab2">
-          <Tab2/>
-        </Route>
-        </Switch>
+    <Switch>
+      <Route path="/tab1">
+        <Tab1/>
+      </Route>
+      <Route path="/tab2">
+        <Tab2/>
+      </Route>
+      <Route path="/">
+        <Tab1/>
+      </Route>
+    </Switch>
     </Router>
   );
 }

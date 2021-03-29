@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 // style
 import './style.scss';
 
@@ -11,7 +12,7 @@ const Box = ({boxData, onBoxClick, value}) => {
       <div className='separator'></div>
       <ul>
         {boxData.include.map(elm =>
-        <li key={elm.id}>{elm.value}</li>
+        <li key={uuidv4()}>{elm.value}</li>
         )}
       </ul>
       <div className={`radioWrapper ${boxData.id === value ? 'active' : ''}`}>

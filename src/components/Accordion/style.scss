@@ -25,6 +25,7 @@
       color:$title1;
       margin: 10px 0;
       font-family: 'RobotoSlab Bold';
+      font-size:$mediumSmall;
     }
 
     .textContent {
@@ -54,6 +55,15 @@
       color: $blue;
       cursor: pointer;
       font-family: 'Roboto Bold';
+      font-size: $xxSmall;
+
+      .imgWrapper {
+        margin: 15px;
+
+        @media(max-width: $mobile){
+          margin:0;
+         }
+      }
 
       @media(max-width: $mobile){
         font-size: $xxxSmall;

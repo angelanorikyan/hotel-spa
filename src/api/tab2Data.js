@@ -1,4 +1,4 @@
-const tab2Data = [
+const data = [
   {
     title: 'Mejora tu Estancia',
     id:'improve',
@@ -118,4 +118,4 @@ const tab2Data = [
   },
 ]
 
-export default tab2Data;
+export default data;

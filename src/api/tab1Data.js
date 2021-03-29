@@ -1,4 +1,4 @@
-const tab1Data = [
+const data = [
   {
     title:'Solo Alojamiento',
     id:'solo',
@@ -113,4 +113,4 @@ const tab1Data = [
   },
 ]
 
-export default tab1Data;
+export default data;
