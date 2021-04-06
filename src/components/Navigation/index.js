@@ -21,7 +21,6 @@ const  Navigation = ({history}) => {
   useEffect(() => {
     setActiveTab(history.location.pathname.slice(1))
   })
-  console.log(history.location.pathname)
   return (
     <div className='navbar'>
       <div className='navContainer'>
